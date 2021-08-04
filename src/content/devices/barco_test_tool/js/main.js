@@ -19,12 +19,12 @@ audioOutputSelect.disabled = !('sinkId' in HTMLMediaElement.prototype);
 function gotDevices(deviceInfos) {
     // Handles being called several times to update labels. Preserve values.
 
-    console.log('selectors:', selectors);
-    console.log('deviceInfos:', deviceInfos);
+    // console.log('selectors:', selectors);
+    // console.log('deviceInfos:', deviceInfos);
 
     const values = selectors.map(select => select.value);
 
-    console.log('values:', values);
+    // console.log('values:', values);
 
     selectors.forEach(select => {
         while (select.firstChild) {
@@ -32,7 +32,7 @@ function gotDevices(deviceInfos) {
         }
     });
 
-    console.log('selectors:', selectors);
+    // console.log('selectors:', selectors);
 
     for (let i = 0; i !== deviceInfos.length; ++i) {
         const deviceInfo = deviceInfos[i];
@@ -57,8 +57,8 @@ function gotDevices(deviceInfos) {
         }
     });
 
-    console.log('values:');
-    console.log(values);
+    // console.log('values:');
+    // console.log(values);
 
 }
 
@@ -132,3 +132,33 @@ audioOutputSelect.onchange = changeAudioDestination;
 videoSelect.onchange = start;
 
 start();
+
+/*
+[
+    {
+        'id': 1, 
+        'cameras': [
+            {'capable': True, 
+            'inUse': False, 
+            'muted': False, 
+            'serialNumber': '5203748100004'}
+        ], 
+        'microphones': [
+            {'capable': True, 
+            'inUse': False, 
+            'muted': False, 
+            'serialNumber': '5203748100004'}
+        ], 
+        'name': 'AVer_CAM130', 
+        'pluggedIn': True, 
+        'serialNumber': '5203748100004_', 
+        'speakers': [
+            {'capable': False, 
+            'inUse': False, 
+            'muted': False, 
+            'serialNumber': ''}
+        ], 
+        'vendor': 'AVer_Information_Inc.'
+    }
+]
+*/

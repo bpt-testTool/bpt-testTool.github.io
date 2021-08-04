@@ -74,7 +74,7 @@
   // curl --insecure --anyauth -X GET -k "https://192.168.0.116:4003/v2/configuration/buttons" -H "accept: application/json"
   // curl --insecure -X GET "https://192.168.0.116:4003/v2/configuration/buttons" -H "accept: application/json"
   // curl --insecure --anyauth -X GET -k "https://192.168.0.116:4003/v2/configuration/buttons" -H "accept: application/json" -u admin:admin
-  // curl --insecure -X GET "https://192.168.0.116:4003/v2/configuration/system/device-identity" -H "accept: application/json"
+  // curl --insecure -X GET "https://192.168.0.116:4003/v2/configuration/system/device-identity" -H "accept: application/json" -u admin:admin
 
 
 let githubURL = new URL(document.URL);

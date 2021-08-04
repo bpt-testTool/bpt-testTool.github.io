@@ -101,11 +101,11 @@
         <!-- ---------------------------------------------------------------------------------- -->
         <h1> <span>Video Test</span> </h1>
         <div class="select">
-            <label for="audioSource">Audio input source: </label><select id="audioSource"></select>
+            <label for="audioSource" style="display: none;">Audio input source: </label><select id="audioSource" style="display: none;"></select>
         </div>
         <br>
         <div class="select">
-            <label for="audioOutput">Audio output destination: </label><select id="audioOutput"></select>
+            <label for="audioOutput" style="display: none;">Audio output destination: </label><select id="audioOutput" style="display: none;"></select>
         </div>
         <br>
         <div class="select">
@@ -114,7 +114,7 @@
 
         <video id="video" playsinline autoplay></video>
 
-        <!-- ---------------------------------------------------------------------------------- -->
+
 
         <!-- <video id="gum-local" autoplay playsinline></video> -->
         <button id="showVideo">Open control</button>
@@ -154,11 +154,51 @@
 
         <br>
 
+        <!-- ----------------------------------------------------------------------------------- -->
+        <!-- video resulotion test -->
+        <h1> <span>Video resolution Test</span> </h1>
+        <div id="container">
+            <div class="row">
+                <div id="selectArea" hidden>
+                    <h4>Select camera(s) below:</h4>
+                    <select id="devices" name="Video devices" multiple title="devices"></select>
+                </div>
+            </div>
+            <div class="row" id="controlArea">
+                <h4>Click one of the buttons below to find camera resolutions:</h4>
+                <div class="col-sm-6 scanarea well well-sm" id="quickArea">
+                    <button class="btn btn-primary btn-block" id="quickButton">Quick Scan</button>
+                    <p id="quickLabel"></p>
+                </div>
+            </div>
+            <div class="row" id="videoarea">
+                <video id="video_resolution_demo" autoplay muted playsinline></video>
+            </div>
+            <div class="row">
+                <!-- <p id="jump" hidden>Jump to <a href="#bottom">bottom</a> of table</p> -->
+                <table class="table-condensed table-bordered table-striped" id="results" hidden>
+                    <tr>
+                        <th>Browser</th>
+                        <th>Device</th>
+                        <th>Res Name</th>
+                        <th>Ratio</th>
+                        <th>Ask</th>
+                        <th>Actual</th>
+                        <th>Status</th>
+                        <th class="hidden">deviceIndex</th>
+                        <th class="hidden">resIndex</th>
+                    </tr>
+                </table>
+            </div>
+            <!-- <div id="bottom"></div> -->
+        </div>
 
+        <!-- ---------------------------------------------------------------------------------- -->
 
         <br><br>
         <!-- microphone test -->
         <h1> <span>Microphone Test</span> </h1>
+
         <section class="main-controls">
             <canvas class="visualizer" height="60px"></canvas>
             <div id="buttons">
@@ -184,6 +224,10 @@
             <label><input type="checkbox" name="video_test_ptz_check" value="PTZ control working">NO</label>
         </div>
 
+
+
+
+
         <input type="button" value="Submit" style="width:120px;height:40px;font-size:20px;">
         <!-- ----------------------------------------------------------------------------------- -->
 
@@ -194,10 +238,15 @@
     </div>
 
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/resolutionScan_test.js"></script>
+    <!-- video test -->
     <script src="js/main.js" async></script>
-
+    <!-- camera PTZ control -->
     <script src="js/main2.js"></script>
+
     <script src="../../../js/lib/ga.js"></script>
+    <!-- microphone vidualization -->
     <script src="js/app.js"></script>
     <script>
         let githubURL = new URL(document.URL);
