@@ -175,12 +175,12 @@ h1 span {
 
 a {
   color: #1D6EEE;
-  font-weight: 300;
+  font-weight: 600;
   text-decoration: none;
 }
 
 h1 a {
-  font-weight: 300;
+  font-weight: 600;
   margin: 0 10px 0 0;
   white-space: nowrap;
 }
