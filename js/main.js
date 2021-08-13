@@ -18,14 +18,7 @@ audioOutputSelect.disabled = !('sinkId' in HTMLMediaElement.prototype);
 
 function gotDevices(deviceInfos) {
     // Handles being called several times to update labels. Preserve values.
-
-    // console.log('selectors:', selectors);
-    // console.log('deviceInfos:', deviceInfos);
-
     const values = selectors.map(select => select.value);
-
-    // console.log('values:', values);
-
     selectors.forEach(select => {
         while (select.firstChild) {
             select.removeChild(select.firstChild);
@@ -57,18 +50,9 @@ function gotDevices(deviceInfos) {
         }
     });
 
-    // console.log('values:');
-    // console.log(values);
-
 }
 
-// console.log('enumerateDevices:(first)');
-// console.log(navigator.mediaDevices.enumerateDevices());
-
 navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError);
-
-// console.log('enumerateDevices:(second)');
-// console.log(navigator.mediaDevices.enumerateDevices());
 
 
 // Attach audio output device to video element using device/sink ID.
