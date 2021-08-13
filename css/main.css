@@ -40,7 +40,7 @@ body {
   word-break: break-word;
 }
 
-button {
+/* button {
   background-color: #d84a38;
   border: none;
   border-radius: 2px;
@@ -65,7 +65,7 @@ button[disabled] {
 
 button[disabled]:hover {
   background-color: #d84a38;
-}
+} */
 
 canvas {
   background-color: #ccc;
@@ -249,9 +249,9 @@ ul {
 }
 
 @media screen and (max-width: 550px) {
-  button:active {
+  /* button:active {
     background-color: darkRed;
-  }
+  } */
 
   h1 {
     font-size: 22px;
