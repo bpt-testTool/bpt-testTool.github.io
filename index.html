@@ -137,9 +137,6 @@
 
                 <div x-show="openTab === 2">
                     <h1> <span>Camera PTZ test</span> </h1>
-                    <div class="select">
-                        <label for="audioSource" style="display: none;">Audio input source: </label><select id="audioSource" style="display: none;"></select>
-                    </div>
                     <br>
                     <div class="select">
                         <label for="audioOutput" style="display: none;">Audio output destination: </label><select id="audioOutput" style="display: none;"></select>
@@ -162,7 +159,7 @@
                         <button name="pan_decrease"> left </button>
                         <input name="pan" type="range" disabled>
                     </div>
-                    
+
                     <div>
                         Is Pan control function working?<br>
                         <label><input type="checkbox" name="video_test_ptz_check" value="PTZ control working">YES</label>
@@ -236,6 +233,9 @@
 
                 <div x-show="openTab === 4">
                     <h1> <span>Audio Test</span> </h1>
+                    <div class="select">
+                        <label for="audioSource">Audio input source: </label><select id="audioSource"></select>
+                    </div>
 
                     <section class="main-controls">
                         <canvas class="visualizer" height="60px"></canvas>
@@ -276,12 +276,17 @@
     <script src="js/resolutionScan_test.js"></script>
 
     <!-- video test -->
-    <script src="js/main.js" async></script>
+    <!-- <script src="js/main.js" async></script> -->
+
     <!-- camera PTZ control -->
     <script src="js/main2.js"></script>
 
     <!-- microphone vidualization -->
-    <script src="js/app.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+
+    <!-- video test + microphone vidualization -->
+    <script src="js/combine_main&app.js"></script>
+
     <script>
         let githubURL = new URL(document.URL);
         console.log(githubURL.href);
@@ -308,5 +313,3 @@
 </body>
 
 </html>
-<!-- https://barco-alliance-program.github.io/src/content/devices/barco_test_tool/test_tool_tag_alpine.html -->
-<!-- https://127.0.0.1/samples-gh-pages/src/content/devices/barco_test_tool/test_tool_tag_alpine.html# -->
